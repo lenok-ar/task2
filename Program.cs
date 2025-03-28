@@ -115,7 +115,7 @@
         public override void ReturnInformation()
         {
             base.ReturnInformation();
-            Console.WriteLine($"Изображение: {isHasImage}");
+            Console.WriteLine($"Изображение (да/нет): {isHasImage}");
         }
     }
 
@@ -137,6 +137,34 @@
                         MsWord word = new MsWord();
                         word.GetInformation();
                         word.ReturnInformation();
+                        break;
+
+                    case "2":   
+                        PDF pdf = new PDF();
+                        pdf.GetInformation();
+                        pdf.ReturnInformation();
+                        break;
+
+                    case "3":
+                        MsExcel excel = new MsExcel();
+                        excel.GetInformation();
+                        excel.ReturnInformation();
+                        break;
+
+                    case "4":
+                        TXT txt = new TXT();
+                        txt.GetInformation();
+                        txt.ReturnInformation();
+                        break;
+
+                    case "5":
+                        HTML html = new HTML(); 
+                        html.GetInformation();
+                        html.ReturnInformation();
+                        break;
+
+                    default:
+                        Console.Write("Введен неизвестный тип файла");
                         break;
                 }
 
