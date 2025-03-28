@@ -12,3 +12,4 @@ C:\Users\Tzinch\source\repos\task3.2\task3.2\obj\Debug\net8.0\refint\task3.2.dll
 C:\Users\Tzinch\source\repos\task3.2\task3.2\obj\Debug\net8.0\task3.2.pdb
 C:\Users\Tzinch\source\repos\task3.2\task3.2\obj\Debug\net8.0\task3.2.genruntimeconfig.cache
 C:\Users\Tzinch\source\repos\task3.2\task3.2\obj\Debug\net8.0\ref\task3.2.dll
+C:\Users\Tzinch\source\repos\task3.2\task3.2\obj\Debug\net8.0\task3.2.sourcelink.json

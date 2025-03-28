@@ -1,22 +1,44 @@
-﻿namespace task3
+﻿namespace task2
 {
     public class Document
     {
         public string Name { get; set; }
         public string Author { get; set; }
-        public List<string> Keyword { get; set; }
+        public string Keyword { get; set; }
         public string Subject { get; set; }
         public string FilePash { get; set; }
+        
+        public virtual void GetInformation()
+        {
+            Console.Write("Введите название файла: ");
+            Name = Console.ReadLine();
+            Console.Write("Введите автора: ");
+            Author = Console.ReadLine();
+            Console.Write("Введите ключевые слова: ");
+            Keyword = Console.ReadLine();
+            Console.Write("Введите тематику: ");
+            Subject = Console.ReadLine();
+            Console.Write("Введите путь к файлу: ");
+            FilePash = Console.ReadLine();
+        }
 
         public virtual void ReturnInformation()
         {
-            Console.WriteLine($"Название: {Name}\nАвтор: {Author}\nКлючевые слова: {Keyword}\nТематика: {Subject}\nПуть к файлу: {FilePash}");
+            Console.WriteLine($"\nНазвание: {Name}\nАвтор: {Author}\nКлючевые слова: {Keyword}\nТематика: {Subject}\nПуть к файлу: {FilePash}");
         }
+
     }
 
     public class MsWord : Document
     {
         public string fontName { get; set; }
+
+        public override void GetInformation()
+        {
+            base.GetInformation();
+            Console.Write("Введите шрифт: ");
+            fontName = Console.ReadLine();
+        }
 
         public override void ReturnInformation()
         {
@@ -73,7 +95,24 @@
     {
         static void Main ()
         {
+            while (true)
+            {
+                string choice;
 
+                Console.WriteLine("\n1 - MS Word\n2 - PDF\n3 - MS Excel\n4 - TXT\n5 - HTML");
+                Console.Write("Выберите тип файла: ");
+                choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        MsWord word = new MsWord();
+                        word.GetInformation();
+                        word.ReturnInformation();
+                        break;
+                }
+
+            }
         }
     }
 }
