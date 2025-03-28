@@ -51,6 +51,13 @@
     {
         public int pageCount { get; set; }
 
+        public override void GetInformation()
+        {
+            base.GetInformation();
+            Console.Write("Количество страниц: ");
+            pageCount = Convert.ToInt32(Console.ReadLine());
+        }
+
         public override void ReturnInformation()
         {
             base.ReturnInformation();
@@ -61,6 +68,13 @@
     public class MsExcel : Document
     {
         public int cellCount { get; set; }
+
+        public override void GetInformation()
+        {
+            base.GetInformation();
+            Console.Write("Количество ячеек: ");
+            cellCount = Convert.ToInt32(Console.ReadLine());
+        }
 
         public override void ReturnInformation()
         {
@@ -73,6 +87,13 @@
     {
         public int rowsCount { get; set; }
 
+        public override void GetInformation()
+        {
+            base.GetInformation();
+            Console.Write("Количество строк: ");
+            rowsCount = Convert.ToInt32(Console.ReadLine());
+        }
+        
         public override void ReturnInformation()
         {
             base.ReturnInformation();
@@ -82,7 +103,14 @@
 
     public class HTML : Document
     {
-        public bool isHasImage { get; set; }
+        public string isHasImage { get; set; }
+
+        public override void GetInformation()
+        {
+            base.GetInformation();
+            Console.Write("Изображение: ");
+            isHasImage = Console.ReadLine();
+        }
 
         public override void ReturnInformation()
         {
