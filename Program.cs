@@ -6,7 +6,7 @@
     public string Author { get; set; }
     public string Keyword { get; set; }
     public string Subject { get; set; }
-    public string FilePash { get; set; }
+    public string FilePath { get; set; }
     
     public virtual void GetInformation()
     {
@@ -19,12 +19,12 @@
       Console.Write("Введите тематику: ");
       Subject = Console.ReadLine();
       Console.Write("Введите путь к файлу: ");
-      FilePash = Console.ReadLine();
+      FilePath = Console.ReadLine();
     }
 
     public virtual void ReturnInformation()
     {
-      Console.WriteLine($"\nНазвание: {Name}\nАвтор: {Author}\nКлючевые слова: {Keyword}\nТематика: {Subject}\nПуть к файлу: {FilePash}");
+      Console.WriteLine($"\nНазвание: {Name}\nАвтор: {Author}\nКлючевые слова: {Keyword}\nТематика: {Subject}\nПуть к файлу: {FilePath}");
     }
   }
 
@@ -35,7 +35,7 @@
     public override void GetInformation()
     {
       base.GetInformation();
-      Console.Write("Введите шрифт: ");
+      Console.Write("Введите название шрифта: ");
       fontName = Console.ReadLine();
     }
 
@@ -107,14 +107,14 @@
     public override void GetInformation()
     {
       base.GetInformation();
-      Console.Write("Изображение: ");
+      Console.Write("Изображение  (да/нет): ");
       isHasImage = Console.ReadLine();
     }
 
     public override void ReturnInformation()
     {
       base.ReturnInformation();
-      Console.WriteLine($"Изображение (да/нет): {isHasImage}");
+      Console.WriteLine($"Изображение: {isHasImage}");
     }
   }
 
